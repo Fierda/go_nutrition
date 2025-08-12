@@ -70,15 +70,24 @@ API RESTful ringan yang dibangun dengan Go dan framework Gin untuk melacak asupa
 ```bash
 # Build image
 docker build -t go-nutrition .
-
+```
+```bash
 # Run container
 docker run -p 9000:9000 \
   -e APP_ID=your_nutritionix_app_id \
   -e APP_KEY=your_nutritionix_app_key \
   go-nutrition
 ```
+### Atau
+```bash
+# Run container
+docker run -p 9000:9000 \
+  --env-file .env \
+  --name go-nutrition \
+  go-nutrition
+```
 
-## 📖 Usage Examples
+## 📖 Usage Examples (In-Memory Database)
 
 ### Buat nutrition entry baru
 ```bash
