@@ -137,7 +137,7 @@ curl http://localhost:9000/health
 ```json
 [{
   "id": 1,
-  "date": "2025-08-11",
+  "date": "2025-08-12",
   "query": "1 plate of Nasi Goreng and 6 Shrimp",
   "nutrients": {
     "foods": [{
@@ -169,7 +169,7 @@ curl http://localhost:9000/health
 ```json
 [{
   "id": 1,
-  "date": "2025-08-11",
+  "date": "2025-08-12",
   "query": "1 plate of Nasi Goreng and 6 Shrimp",
   "food_name": "nasi goreng + shrimp",
   "serving_size": "1.0 cup + 6.0 shrimp",
