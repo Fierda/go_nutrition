@@ -1,8 +1,8 @@
-# Go Nutrition Tracker
+# Go Nutrition Tracker 🐹
 
 API RESTful ringan yang dibangun dengan Go dan framework Gin untuk melacak asupan nutrisi. Aplikasi ini terintegrasi dengan Nutritionix API untuk memberikan informasi nutrisi yang akurat dari makanan yang dikonsumsi pengguna (USDA Database Foundation).
 
-## 🚀 Fitur Utama
+## 🌐 Fitur Utama
 
 - **Pelacakan Nutrisi**: Buat dan kelola entry nutrisi dengan data lengkap (bukan dengan Brand)
 - **Integrasi API**: Terintegrasi dengan Nutritionix API untuk data nutrisi akurat
@@ -22,7 +22,7 @@ API RESTful ringan yang dibangun dengan Go dan framework Gin untuk melacak asupa
 
 **Query Parameters**: GET `/entries` mendukung `format=simple` untuk response yang disederhanakan.
 
-## 🏗️ Technology Stack
+## 🏗️ Tech Stack
 
 - **Language**: Go 1.23.6
 - **Framework**: Gin
