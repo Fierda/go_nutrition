@@ -22,8 +22,6 @@ RUN addgroup -g 1000 -S appgroup && \
 WORKDIR /app
 COPY --from=builder --chown=appuser:appgroup /app/main .
 
-# Optional: copy env file from host if you really want it in image
-# COPY .env .env
 
 USER appuser
 EXPOSE 9000
@@ -32,3 +30,4 @@ HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
   CMD wget --no-verbose --tries=1 --spider http://localhost:9000/health || exit 1
 
 CMD ["./main"]
+
