@@ -105,7 +105,7 @@ curl -X POST http://localhost:9000/entries \
   -H "Content-Type: application/json" \
   -d '{
     "query": "1 fried rice with 6 shrimp and 1 egg",
-    "date": "2025-08-1w"
+    "date": "2025-08-12"
   }'
 ```
 
