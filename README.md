@@ -197,16 +197,6 @@ curl http://localhost:9000/health
 3. **Docker Build Issues**
    - Solution: Pastikan Docker daemon running dan ada cukup disk space
 
-## 🧪 Testing
-
-```bash
-# Unit tests
-go test ./...
-
-# API testing
-curl http://localhost:9000/health
-```
-
 ## 📚 API Documentation
 
 Interactive API documentation tersedia di:
