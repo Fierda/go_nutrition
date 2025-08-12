@@ -7,16 +7,15 @@ API RESTful ringan yang dibangun dengan Go dan framework Gin untuk melacak asupa
 - **Pelacakan Nutrisi**: Buat dan kelola entry nutrisi dengan data lengkap (bukan dengan Brand)
 - **Integrasi API**: Terintegrasi dengan Nutritionix API untuk data nutrisi akurat
 - **Swagger Documentation**: API documentation interaktif
-- **Docker Support**: Aplikasi dalam container untuk deployment mudah
-- **Thread-Safe**: Operasi aman dengan mutex locks
+- **Docker Support**: Aplikasi dalam container untuk portable deployment
 
 ## 📋 API Endpoints
 
 | Method | Endpoint | Deskripsi |
 |--------|----------|-----------|
 | GET | `/health` | Health check endpoint |
-| GET | `/entries` | Ambil semua nutrition entries |
-| GET | `/entries/:id` | Ambil entry berdasarkan ID |
+| GET | `/entries` | Ambil data seluruh nutrition entries |
+| GET | `/entries/:id` | Ambil nutrition entry berdasarkan ID |
 | POST | `/entries` | Buat nutrition entry baru |
 | GET | `/docs/*any` | Swagger documentation |
 
@@ -80,7 +79,7 @@ docker run -p 9000:9000 \
   -e APP_KEY=your_nutritionix_app_key \
   go-nutrition
 ```
-### Atau
+#### Atau
 ```bash
 # Run container
 docker run -p 9000:9000 \
@@ -195,7 +194,6 @@ curl http://localhost:9000/health
 
 ## 📸 Application Demo
 
-Below are screenshots and GIFs showing the application in action.
 
 | Feature       | Demo |
 |---------------|------|
