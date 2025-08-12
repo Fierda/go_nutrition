@@ -163,33 +163,43 @@ func getEntries(c *gin.Context) {
 
 // GetEntryByID godoc
 // @Summary Get nutrition entry by ID
-// @Description Get a specific nutrition entry by its ID
+// @Description Get a specific nutrition entry by its ID with optional simplified format
 // @Tags entries
 // @Accept json
 // @Produce json
 // @Param id path int true "Entry ID"
-// @Success 200 {object} Entry
+// @Param format query string false "Response format (simple)" Enums(simple)
+// @Success 200 {object} Entry "Full format entry"
+// @Success 200 {object} SimplifiedEntry "Simplified format entry (when format=simple)"
 // @Failure 400 {object} ErrorResponse
 // @Failure 404 {object} ErrorResponse
 // @Router /entries/{id} [get]
 func getEntryByID(c *gin.Context) {
-	idStr := c.Param("id")
-	id, err := strconv.Atoi(idStr)
-	if err != nil || id <= 0 {
-		c.JSON(http.StatusBadRequest, gin.H{"error": "Invalid ID format"})
-		return
-	}
-	
-	mu.RLock()
-	entry, exists := store[id]
-	mu.RUnlock()
-	
-	if !exists {
-		c.JSON(http.StatusNotFound, gin.H{"error": "Entry not found"})
-		return
-	}
-	
-	c.JSON(http.StatusOK, entry)
+    idStr := c.Param("id")
+    id, err := strconv.Atoi(idStr)
+    if err != nil || id <= 0 {
+        c.JSON(http.StatusBadRequest, gin.H{"error": "Invalid ID format"})
+        return
+    }
+    
+    format := c.Query("format")
+    
+    mu.RLock()
+    entry, exists := store[id]
+    mu.RUnlock()
+    
+    if !exists {
+        c.JSON(http.StatusNotFound, gin.H{"error": "Entry not found"})
+        return
+    }
+    
+    if format == "simple" {
+        simplified := toSimplified(entry)
+        c.JSON(http.StatusOK, simplified)
+        return
+    }
+    
+    c.JSON(http.StatusOK, entry)
 }
 
 // CreateEntry godoc

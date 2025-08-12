@@ -47,6 +47,7 @@ API RESTful ringan yang dibangun dengan Go dan framework Gin untuk melacak asupa
 2. **Install dependencies**
    ```bash
    go mod download
+   go install github.com/swaggo/swag/cmd/swag@v1.8.12
    ```
 
 3. **Setup environment variables**
@@ -191,6 +192,23 @@ curl http://localhost:9000/health
   "created_at": "2025-08-12T10:14:36.3151853+07:00"
 }]
 ```
+
+## 📸 Application Demo
+
+Below are screenshots and GIFs showing the application in action.
+
+| Feature       | Demo |
+|---------------|------|
+| **Create an Entry** | ![Create an Entry](assets/q1.png) |
+| **Get All Entries - Full** | ![Get All Entries - Full](assets/q3.png) |
+| **Get All Entries - Simple** | ![Get All Entries - Simple](assets/q4.png) |
+| **Get Entry by ID** | ![Get Entry by ID](assets/a6.png) |
+| **Docker Logs** | ![Docker Logs](assets/q5.png) |
+
+![In Action](assets/q1.gif)
+---
+
+
 
 ## 🔍 Troubleshooting
 
