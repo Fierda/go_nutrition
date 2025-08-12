@@ -200,7 +200,7 @@ curl http://localhost:9000/health
 | **Create an Entry** | ![Create an Entry](assets/q1.png) |
 | **Get All Entries - Full** | ![Get All Entries - Full](assets/q3.png) |
 | **Get All Entries - Simple** | ![Get All Entries - Simple](assets/q4.png) |
-| **Get Entry by ID** | ![Get Entry by ID](assets/a6.png) |
+| **Get Entry by ID** | ![Get Entry by ID](assets/q6.png) |
 | **Docker Logs** | ![Docker Logs](assets/q5.png) |
 
 ![In Action](assets/q1.gif)
