@@ -2,6 +2,10 @@
 
 API RESTful ringan yang dibangun dengan Go dan framework Gin untuk melacak asupan nutrisi. Aplikasi ini terintegrasi dengan Nutritionix API untuk memberikan informasi nutrisi yang akurat dari makanan yang dikonsumsi pengguna (USDA Database Foundation).
 
+## Cara Penggunaan
+Untuk mendapatkan data nutrisi yang tepat, gunakan nama makanan, buah, dan sayuran dalam bahasa Inggris karena aplikasi ini menggunakan database Nutritionix API (USDA).
+**Contoh:** `apple`, `rice`, `fried chicken`, `2 bottle soda`, `beef kebab`
+
 ## 🌐 Fitur Utama
 
 - **Pelacakan Nutrisi**: Buat dan kelola entry nutrisi dengan data lengkap (bukan dengan Brand)
