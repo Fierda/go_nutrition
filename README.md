@@ -4,7 +4,7 @@ API RESTful ringan yang dibangun dengan Go dan framework Gin untuk melacak asupa
 
 ## 🚀 Fitur Utama
 
-- **Pelacakan Nutrisi**: Buat dan kelola entry nutrisi dengan data lengkap
+- **Pelacakan Nutrisi**: Buat dan kelola entry nutrisi dengan data lengkap (bukan dengan Brand)
 - **Integrasi API**: Terintegrasi dengan Nutritionix API untuk data nutrisi akurat
 - **Swagger Documentation**: API documentation interaktif
 - **Docker Support**: Aplikasi dalam container untuk deployment mudah
@@ -90,7 +90,7 @@ docker run -p 9000:9000 \
 
 ## 📖 Usage Examples (In-Memory Database)
 
-### Buat nutrition entry baru
+### Create Nutrition Plan / Info Entry
 ```bash
 curl -X POST http://localhost:9000/entries \
   -H "Content-Type: application/json" \
@@ -100,7 +100,16 @@ curl -X POST http://localhost:9000/entries \
   }'
 ```
 
-### Get semua entries
+```bash
+curl -X POST http://localhost:9000/entries \
+  -H "Content-Type: application/json" \
+  -d '{
+    "query": "1 fried rice with 6 shrimp and 1 egg",
+    "date": "2025-08-1w"
+  }'
+```
+
+### Get All Input Entries
 ```bash
 # Full format
 curl http://localhost:9000/entries
