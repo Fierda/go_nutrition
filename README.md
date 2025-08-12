@@ -202,21 +202,3 @@ curl http://localhost:9000/health
 
 Interactive API documentation tersedia di:
 - **Local**: http://localhost:9000/docs/index.html
-
-## 🤝 Contributing
-
-1. Fork repository
-2. Create feature branch (`git checkout -b feature/fitur-baru`)
-3. Commit changes (`git commit -m 'Add fitur baru'`)
-4. Push to branch (`git push origin feature/fitur-baru`)
-5. Create Pull Request
-
-## 📄 License
-
-Project ini dilisensikan di bawah MIT License.
-
-## 🙏 Acknowledgments
-
-- [Nutritionix API](https://developer.nutritionix.com/) untuk nutrition data
-- [Gin Framework](https://gin-gonic.com/) untuk HTTP router
-- [Swagger](https://swagger.io/) untuk API documentation
